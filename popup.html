@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="nl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KartTime Reader</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><div><b>KART</b><span>TIME</span></div><small id="status">Niet verbonden</small></header>
+<section class="connect"><input id="url" placeholder="https://live.apex-timing.com/kartbaanoldenzaal/"/><button id="open">Open live timing</button></section>
+<nav><button class="tab active" data-tab="live">LIVE</button><button class="tab" data-tab="ranking">KART RANKING</button><button class="tab" data-tab="heats">HEATS</button></nav>
+<section id="live" class="panel"><div class="controls"><button id="refresh">Nu uitlezen</button><button id="clear">Alles wissen</button></div><div class="info"><span id="session">Sessie: —</span><span id="updated">—</span></div><main id="table"></main></section>
+<section id="ranking" class="panel hidden"><div class="ranking-help">Ranking gebruikt <b>gemiddelde + beste tijd</b>. Gemiddelde is gebaseerd op de beste tijd die de kart in iedere opgeslagen heat heeft gereden.</div><div class="ranking-head"><span>#</span><span>Kart</span><span>Gem.</span><span>Beste</span><span>Heats</span></div><main id="rankingTable"></main></section>
+<section id="heats" class="panel hidden"><main id="heatTable"></main></section>
+<footer>Leest Apex automatisch. Een heat wordt opgeslagen zodra de volgende heat/sessie wordt herkend.</footer>
+<script src="popup.js"></script>
+</body></html>

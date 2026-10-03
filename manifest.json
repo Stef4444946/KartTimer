@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "KartTime Reader",
+  "version": "2.0.0",
+  "description": "Leest Apex Timing live, slaat heats op en bouwt automatisch een kart-ranking op basis van gemiddelde en beste tijden.",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["https://live.apex-timing.com/*", "http://live.apex-timing.com/*"],
+  "action": {"default_popup": "popup.html"},
+  "content_scripts": [{
+    "matches": ["https://live.apex-timing.com/*", "http://live.apex-timing.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
